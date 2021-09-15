@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Classe Virtuelle</title>
+<meta charset="utf-8">
+	
+<!-- Main CSS File -->
+<link rel="stylesheet" href="css/chat.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300" rel="stylesheet" type="text/css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="frame">
+  <div id="sidepanel">
+    <div id="profile">
+      <div class="wrap"> <img id="profile-img" src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="online" alt="" />
+        <p id="nomClasse"></p>
+        <div id="expanded">
+          <button type="button" style="background: #2076A6; color: white" class="btn w-100  mb-2">Liste de présence</button>
+          <button type="button" style="background: #2076A6; color: white" class="btn w-100">Liste des questions</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="contacts">
+      <p style="text-align: center; color: rgb(240, 240, 240)">Élèves connectés</p>
+      <ul>
+        <li class="contact">
+          <div class="wrap"> <span class="contact-status online"></span> <img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" />
+            <div class="meta">
+              <p class="name">DixCordes Bot</p>
+              <p class="preview">Hey, je suis le bot de la classe</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul id="userList">
+      </ul>
+    </div>
+
+    <div id="list">
+      <p style="text-align: center; color: rgb(255, 255, 255)" class="mt-2">Liste de tous les eleves</p>
+
+        <ul>
+          <li class="eleve">
+            <div class="wrap"> <span class="contact-status online"></span> <img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" />
+              <div class="meta">
+                <p class="name">DixCordes Bot</p>
+                <p class="preview">Hey, je suis le bot de la classe</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul id="userListAll">
+        </ul>
+      </div>
+
+    
+    <div id="bottom-bar">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="contact-profile"> <img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" />
+      <p>Vous etes dans l'espace Professeur</p>
+      <button style="float: right; background: #2076A6; color: white" class="btn w-5 mt-1 mr-2" type="button" ><a style="color: white;" href="index.html" class="btn">Quitter</a></button>
+    </div>
+
+    <div class="messages">
+      <ul id='msg-list'>
+      </ul>
+    </div>
+
+    <div class="message-input">
+      <form id="msg-input" class="wrap">
+        <input id="msg" type="text" placeholder="Ecrire un message..."/>
+        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Main JS File --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.6/qs.min.js" integrity="sha512-3TmPrquYLaAsUmZKXRARTDC5siWhLAdBVqNo4dWpDABBtLU62AaoTaQJEvjxjExcZYurO6i1dnK85k8pPIBlRg==" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/prof.js"></script>
+
+</body>
+</html>
